@@ -1,5 +1,3 @@
-# quant-lab-b07-tlt
-[README (1).md](https://github.com/user-attachments/files/34555131/README.1.md)
 # QUANT LAB — B07 : TLT
 
 **Projet intégrateur — Trading Intelligent**  

@@ -6,10 +6,10 @@
 
 ## Équipe
 
-| Membre | Nom | Responsabilités principales prévues |
-|---|---|---|
-| 1 | Meryam Aznak | Collecte et audit des données, analyse exploratoire, économétrie de la moyenne et du risque |
-| 2 | Nouhaila Elbouhali | Machine Learning / Deep Learning, interface Streamlit, intégration des stratégies et du backtest |
+| Membre | Nom                | Responsabilités principales prévues                                                              |
+| ------ | ------------------ | ------------------------------------------------------------------------------------------------ |
+| 1      | Meryam Aznak       | Collecte et audit des données, analyse exploratoire, économétrie de la moyenne et du risque      |
+| 2      | Nouhaila Elbouhali | Machine Learning / Deep Learning, interface Streamlit, intégration des stratégies et du backtest |
 
 La définition des hypothèses, la gestion du risque, la validation scientifique, les tests, la documentation et la soutenance sont des responsabilités communes. La répartition pourra évoluer selon les besoins du projet.
 
@@ -25,8 +25,8 @@ L'objectif est de développer un **outil intégré, modulaire et reproductible**
 
 ### Actifs financiers étudiés
 
-- **Actif principal — TLT :** ETF exposé aux obligations à long terme du Trésor américain (*iShares 20+ Year Treasury Bond ETF*), particulièrement sensible aux variations des taux d'intérêt et aux évolutions du marché obligataire.
-- **Actif de comparaison — SPY :** ETF répliquant l'indice S&P 500 (*SPDR S&P 500 ETF Trust*), utilisé comme référence pour mettre en perspective les comportements et les performances des stratégies étudiées.
+- **Actif principal — TLT :** ETF exposé aux obligations à long terme du Trésor américain (_iShares 20+ Year Treasury Bond ETF_), particulièrement sensible aux variations des taux d'intérêt et aux évolutions du marché obligataire.
+- **Actif de comparaison — SPY :** ETF répliquant l'indice S&P 500 (_SPDR S&P 500 ETF Trust_), utilisé comme référence pour mettre en perspective les comportements et les performances des stratégies étudiées.
 
 ## Question scientifique
 
@@ -35,11 +35,11 @@ L'objectif est de développer un **outil intégré, modulaire et reproductible**
 L'objectif de notre projet est d'étudier si prévoir correctement la hausse ou la baisse de TLT permet réellement d'obtenir de meilleures performances en trading.
 
 Nous souhaitons comparer deux approches :
+
 - **Stratégie directionnelle :** prendre des décisions d'investissement uniquement à partir de la direction du rendement prévu.
 - **Stratégie avec filtre de risque :** utiliser la même prévision, tout en adaptant le niveau d'investissement selon le risque estimé.
 
 **Notre hypothèse :** prendre en compte le risque en plus des prévisions pourrait permettre de mieux gérer les investissements et d'obtenir un meilleur équilibre entre rendement et risque. Cette hypothèse sera vérifiée à travers des simulations et une comparaison des deux stratégies.
-
 
 ## Périmètre fonctionnel prévu
 
@@ -58,7 +58,7 @@ Le parcours est : **données → variables → modèles de rendement et de risqu
 
 - Données journalières OHLCV de TLT, avec SPY synchronisé pour la comparaison.
 - Prix ajustés ou convention de total return documentée ; provenance, dates et éventuelles lacunes conservées.
-- Décision après clôture du jour *t*, exécution au plus tôt à l'ouverture de *t+1*.
+- Décision après clôture du jour _t_, exécution au plus tôt à l'ouverture de _t+1_.
 - Périodes proposées par le cahier : apprentissage **2018–2022**, validation **2023–2024**, test final **du 1er janvier 2025 au 30 octobre 2026**, sous réserve de disponibilité et validation par l'enseignant.
 - Aucune donnée future ne devra être utilisée pour produire un signal passé.
 
@@ -70,22 +70,21 @@ Le parcours est : **données → variables → modèles de rendement et de risqu
 - Mesures prévues : rendement, volatilité, Sharpe, drawdown maximal, turnover, frais, transactions et mesures de risque.
 - Paper trading sur au moins cinq nouvelles séances documentées ; aucun argent réel.
 
-
 ### Architecture technique prévue
 
-| Fichier / Dossier | Rôle |
-|---|---|
-| `app.py` | Point d'entrée de l'application Streamlit |
-| `src/data.py` | Acquisition, préparation et contrôle des données |
-| `src/features.py` | Création des variables explicatives et des cibles |
-| `src/models/` | Implémentation des modèles de prévision |
-| `src/risk.py` | Estimation du risque et calcul des indicateurs |
-| `src/strategy.py` | Génération des signaux et positions cibles |
-| `src/backtest.py` | Simulation historique et prise en compte des coûts |
-| `src/paper.py` | Gestion du Paper Trading et du journal des simulations |
-| `configs/` | Paramètres et configurations du projet |
-| `tests/` | Tests et vérifications du fonctionnement |
-| `reports/` | Rapports, résultats et analyses |
+| Fichier / Dossier | Rôle                                                   |
+| ----------------- | ------------------------------------------------------ |
+| `app.py`          | Point d'entrée de l'application Streamlit              |
+| `src/data.py`     | Acquisition, préparation et contrôle des données       |
+| `src/features.py` | Création des variables explicatives et des cibles      |
+| `src/models/`     | Implémentation des modèles de prévision                |
+| `src/risk.py`     | Estimation du risque et calcul des indicateurs         |
+| `src/strategy.py` | Génération des signaux et positions cibles             |
+| `src/backtest.py` | Simulation historique et prise en compte des coûts     |
+| `src/paper.py`    | Gestion du Paper Trading et du journal des simulations |
+| `configs/`        | Paramètres et configurations du projet                 |
+| `tests/`          | Tests et vérifications du fonctionnement               |
+| `reports/`        | Rapports, résultats et analyses                        |
 
 ---
 
@@ -93,18 +92,18 @@ Le parcours est : **données → variables → modèles de rendement et de risqu
 
 La répartition des responsabilités est organisée par livrable afin de faciliter le suivi du développement et de garantir une contribution équilibrée des deux membres.
 
-| Domaine | Meryam Aznak | Nouhaila Elbouhali |
-|---|---|---|
-| Cadrage et README (D01) | Co-rédaction | Co-rédaction |
-| Collecte, provenance et qualité (D02) | Responsable principale | Relecture et tests |
-| Économétrie de la moyenne (D03) | Responsable principale | Relecture et intégration |
-| Économétrie du risque (D04) | Responsable principale | Intégration des indicateurs |
-| Machine Learning et Deep Learning (D05) | Validation du protocole | Responsable principale |
-| Stratégies et Backtesting (D06) | Règles de risque et validation | Implémentation principale |
-| Interface Streamlit (D07) | Contrôle des affichages | Implémentation principale |
-| Paper Trading (D08) | Contrôle du journal | Intégration principale |
-| Tests et reproductibilité (D09) | Partagé | Partagé |
-| Rapport et soutenance (D10) | Partagé | Partagé |
+| Domaine                                 | Meryam Aznak                   | Nouhaila Elbouhali          |
+| --------------------------------------- | ------------------------------ | --------------------------- |
+| Cadrage et README (D01)                 | Co-rédaction                   | Co-rédaction                |
+| Collecte, provenance et qualité (D02)   | Responsable principale         | Relecture et tests          |
+| Économétrie de la moyenne (D03)         | Responsable principale         | Relecture et intégration    |
+| Économétrie du risque (D04)             | Responsable principale         | Intégration des indicateurs |
+| Machine Learning et Deep Learning (D05) | Validation du protocole        | Responsable principale      |
+| Stratégies et Backtesting (D06)         | Règles de risque et validation | Implémentation principale   |
+| Interface Streamlit (D07)               | Contrôle des affichages        | Implémentation principale   |
+| Paper Trading (D08)                     | Contrôle du journal            | Intégration principale      |
+| Tests et reproductibilité (D09)         | Partagé                        | Partagé                     |
+| Rapport et soutenance (D10)             | Partagé                        | Partagé                     |
 
 Cette répartition est prévisionnelle et pourra évoluer en fonction de l'avancement du projet.
 
@@ -150,3 +149,25 @@ quant-lab-b07-tlt/
 └── reports/
     └── .gitkeep
 ```
+
+## D02 — Collecte et audit des données
+
+Pour ce deuxième livrable, nous avons récupéré les données historiques journalières de TLT et SPY depuis Yahoo Finance, pour la période du 2 janvier 2018 au 30 octobre 2026.
+
+Chaque actif contient 2 220 observations. Nous avons effectué plusieurs contrôles : valeurs manquantes, dates dupliquées, cohérence des prix OHLC, volumes négatifs et rendements extrêmes.
+
+Les contrôles automatiques n'ont signalé aucune anomalie et les deux séries possèdent les mêmes dates de cotation.
+
+Nous avons également généré des graphiques pour comparer l'évolution des prix ajustés et les rendements journaliers des deux actifs.
+
+Les données sont conservées dans un snapshot daté pour assurer la reproductibilité. Trois tests unitaires ont été exécutés avec succès.
+
+**Exécution :**
+
+```bash
+py -m pip install -r requirements.txt
+py -m src.data --mode download
+py -m pytest -v
+```
+
+Les fichiers de données et les résultats d'audit sont disponibles dans les dossiers `data/snapshots/` et `reports/`.

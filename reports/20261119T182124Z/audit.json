@@ -1,0 +1,58 @@
+{
+  "TLT": {
+    "ticker": "TLT",
+    "rows": 2220,
+    "first_date": "2018-01-02",
+    "last_date": "2026-10-30",
+    "missing_by_column": {
+      "Open": 0,
+      "High": 0,
+      "Low": 0,
+      "Close": 0,
+      "Adj Close": 0,
+      "Volume": 0
+    },
+    "issue_counts": {
+      "invalid_date": 0,
+      "duplicate_date": 0,
+      "missing_numeric": 0,
+      "nonpositive_price": 0,
+      "negative_volume": 0,
+      "ohlc_inconsistent": 0,
+      "extreme_adjusted_return_over_20pct": 0
+    },
+    "flagged_rows": 0,
+    "weekend_rows": 0
+  },
+  "SPY": {
+    "ticker": "SPY",
+    "rows": 2220,
+    "first_date": "2018-01-02",
+    "last_date": "2026-10-30",
+    "missing_by_column": {
+      "Open": 0,
+      "High": 0,
+      "Low": 0,
+      "Close": 0,
+      "Adj Close": 0,
+      "Volume": 0
+    },
+    "issue_counts": {
+      "invalid_date": 0,
+      "duplicate_date": 0,
+      "missing_numeric": 0,
+      "nonpositive_price": 0,
+      "negative_volume": 0,
+      "ohlc_inconsistent": 0,
+      "extreme_adjusted_return_over_20pct": 0
+    },
+    "flagged_rows": 0,
+    "weekend_rows": 0
+  },
+  "synchronisation": {
+    "common_sessions": 2220,
+    "only_tlt": 0,
+    "only_spy": 0
+  },
+  "snapshot": "20261119T182124Z"
+}

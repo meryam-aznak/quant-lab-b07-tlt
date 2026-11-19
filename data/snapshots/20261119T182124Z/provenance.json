@@ -1,0 +1,23 @@
+{
+  "acquired_at_utc": "20261119T182124Z",
+  "source": "Yahoo Finance via yfinance",
+  "mode": "download",
+  "frequency": "daily",
+  "market_timezone": "America/New_York",
+  "date_storage": "date de séance (YYYY-MM-DD)",
+  "adjustment": "Adj Close de la source pour rendements de prix ajustés; OHLC bruts",
+  "start_inclusive": "2018-01-01",
+  "end_exclusive": "2026-10-31",
+  "files": {
+    "TLT": {
+      "path": "data\\snapshots\\20261119T182124Z\\tlt.csv",
+      "sha256": "2ae2d0a983f0e39210719e1409d1ad11ab93d34b3afe4f2eced7f4cd22305183",
+      "rows": 2220
+    },
+    "SPY": {
+      "path": "data\\snapshots\\20261119T182124Z\\spy.csv",
+      "sha256": "4968ab221b4ef12729764cf7c1e3b372082c230079023daf6f63859ded94c46a",
+      "rows": 2220
+    }
+  }
+}

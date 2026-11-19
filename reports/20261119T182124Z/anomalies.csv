@@ -1,0 +1,1 @@
+Date,Ticker,invalid_date,duplicate_date,missing_numeric,nonpositive_price,negative_volume,ohlc_inconsistent,extreme_adjusted_return_over_20pct

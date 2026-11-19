@@ -16,7 +16,3 @@ Les anomalies détaillées sont dans `anomalies.csv` et le graphique dans `coher
 
 Les rendements >20 % en valeur absolue sont des alertes à examiner, pas des erreurs confirmées.
 Les jours fériés et les week-ends ne sont pas automatiquement considérés comme des données manquantes.
-La vérification des distributions et ajustements de la source reste à documenter.
-
-## Conclusion à compléter après examen humain
-Indiquer les anomalies expliquées, corrections éventuelles, limites et décision de validation du snapshot.

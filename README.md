@@ -171,3 +171,46 @@ py -m pytest -v
 ```
 
 Les fichiers de données et les résultats d'audit sont disponibles dans les dossiers `data/snapshots/` et `reports/`.
+
+## D03 — Comparaison des modèles de prévision
+
+### Objectif
+
+Dans cette étape, nous cherchons à prévoir les rendements journaliers du TLT et à comparer plusieurs méthodes statistiques. L'objectif est de vérifier si un modèle plus complexe permet réellement d'obtenir de meilleures prévisions.
+
+### Modèles utilisés
+
+Nous avons comparé quatre modèles :
+
+- **Modèle naïf :** prévoit un rendement nul pour le jour suivant. Il sert de référence.
+- **ARIMA :** utilise les valeurs passées de la série pour réaliser les prévisions.
+- **SARIMA :** ajoute une composante saisonnière.
+- **SARIMAX :** intègre une variable extérieure, ici le rendement retardé du SPY.
+
+### Résultats sur la période de validation (2023–2024)
+
+| Modèle  |      MAE |     RMSE |
+| ------- | -------: | -------: |
+| Naïf    | 0,008267 | 0,010338 |
+| ARIMA   | 0,008246 | 0,010317 |
+| SARIMA  | 0,008359 | 0,010428 |
+| SARIMAX | 0,008270 | 0,010339 |
+
+Le modèle ARIMA obtient la RMSE la plus faible. Nous l'avons donc retenu pour l'évaluation finale.
+
+### Résultats sur la période de test (2025–2026)
+
+| Modèle |      MAE |     RMSE |
+| ------ | -------: | -------: |
+| Naïf   | 0,005422 | 0,006953 |
+| ARIMA  | 0,005415 | 0,006946 |
+
+ARIMA reste légèrement meilleur que le modèle naïf, mais la différence est très faible.
+
+Les diagnostics montrent également que les modèles ne capturent pas toutes les dépendances présentes dans la série.
+
+### Conclusion
+
+Cette comparaison montre qu'un modèle plus complexe n'est pas forcément plus performant. ARIMA donne les meilleurs résultats dans notre étude, mais son amélioration reste limitée.
+
+Pour répondre à notre problématique principale, nous devrons ensuite vérifier si cette petite amélioration statistique peut réellement apporter un avantage dans une stratégie de trading.

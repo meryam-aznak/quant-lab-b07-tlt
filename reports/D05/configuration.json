@@ -1,0 +1,56 @@
+{
+  "seed": 42,
+  "selected": {
+    "Ridge": {
+      "alpha": 1000
+    },
+    "RandomForest": {
+      "max_depth": 3,
+      "min_samples_leaf": 10,
+      "n_estimators": 100
+    },
+    "MLP": {
+      "hidden": 8,
+      "epochs": 20
+    }
+  },
+  "champion_validation": "RandomForest",
+  "selection_metric": "RMSE validation",
+  "features": [
+    "TLT_lag1",
+    "TLT_lag2",
+    "TLT_lag3",
+    "TLT_lag5",
+    "TLT_mean5",
+    "TLT_vol5",
+    "TLT_mean10",
+    "TLT_vol10",
+    "TLT_mean20",
+    "TLT_vol20",
+    "TLT_momentum5",
+    "TLT_ma20",
+    "SPY_lag1",
+    "SPY_lag2",
+    "SPY_lag3",
+    "SPY_lag5",
+    "SPY_mean5",
+    "SPY_vol5",
+    "SPY_mean10",
+    "SPY_vol10",
+    "SPY_mean20",
+    "SPY_vol20",
+    "SPY_momentum5",
+    "SPY_ma20"
+  ],
+  "counts": {
+    "train": 1238,
+    "validation": 502,
+    "test": 459
+  },
+  "versions": {
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1"
+  }
+}

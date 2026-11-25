@@ -1,0 +1,2 @@
+-r requirements_d03.txt
+scipy>=1.10
